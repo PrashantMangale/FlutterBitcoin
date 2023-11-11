@@ -1,0 +1,3 @@
+class ApiUrls {
+    static const String strLatestCryptoCoins = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
+}
