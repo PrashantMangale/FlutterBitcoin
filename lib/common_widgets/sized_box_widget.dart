@@ -13,4 +13,8 @@ class SizedBoxWidget {
         return SizedBox(width: size, height: size);
     }
   }
+
+  static SizedBox getShrink() {
+    return const SizedBox.shrink();
+  }
 }
