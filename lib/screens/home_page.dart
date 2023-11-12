@@ -20,7 +20,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController textEditingController = TextEditingController();
 
-  List<String> listFilterApiKeys = ["", "price", "volume_24h"];
+  List<String> listFilterApiKeys = ["market_cap", "price", "volume_24h"];
   List<String> listFilters = [AppStrings.strFilter, "Price", "Volume24h"];
   List<CryptoCurrency> listCryptoCurrency = [];
   int totalUsd = 0;
@@ -335,7 +335,7 @@ class _HomePageState extends State<HomePage> {
       if ((selectedFilter.toLowerCase() == AppStrings.strFilter)) {
         resetFilter();
       }
-      String filter = listFilterApiKeys[selectedFilterPos - 1];
+      String filter = listFilterApiKeys[selectedFilterPos];
       setDataLoading(true);
       ApiHandler.callGetTopCryptoCurrencyAPI(filter).then((value) {
         setDataLoading(false);
